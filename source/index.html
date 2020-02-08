@@ -4,41 +4,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Седона | Главная</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header page-header--preview">
     <nav class="page-header__navigation" aria-label="Основная навигация">
+      <!--page-header__list-open для навигации без JS-->
+      <ul class="page-header__list page-header__list--nojs">
+        <li class="page-header__item"><a class="page-header__link page-header__link--active" href="#">главная</a></li>
+        <li class="page-header__item page-header__item--margin"><a class="page-header__link" href="catalog.html">фото и видео</a></li>
+        <li class="page-header__item"><a class="page-header__link" href="form.html">форма отзыва</a></li>
+        <li class="page-header__item page-header__item--padding"><a class="page-header__link" href="form.html">html academy</a></li>
+      </ul>
       <a class="page-header__logotype">
         <picture>
-          <img class="page-header__logotype-icon" src="img/icon-logo-mobile.svg" width="33" height="38" alt="sedona logo">
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <img class="page-header__logotype-icon" src="img/logo-sedona-mobile.svg" width="103" height="83" alt="sedona logo">
         </picture>
       </a>
       <!--header__trigger-nojs для переключателя без JS-->
       <button class="page-header__trigger page-header__trigger--nojs" type="button" title="Главная навигация">
         <span class="page-header__trigger-name">Навигация</span>
       </button>
-      <!--page-header__list-open для навигации без JS-->
-      <ul class="page-header__list page-header__list--nojs">
-        <li class="page-header__item"><a class="page-header__link page-header__link--active" href="#">главная</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="catalog.html">фото и видео</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="form.html">форма отзыва</a></li>
-        <li class="page-header__item"><a class="page-header__link" href="form.html">html academy</a></li>
-      </ul>
     </nav>
   </header>
   <main>
     <section class="intro">
-      <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
-      <img class="intro-img__title" src="img/intro-welcome.svg" width="459" height="353" alt="Welcome to the gorgeus Sedona">
+      <h2 class="sr-only">Добро пожаловать в Седону!</h2>
+      <img class="intro-img__title" src="img/text-sedona-index.svg" width="281" height="214" alt="Welcome to the gorgeus Sedona">
     </section>
     <section class="intro-component">
-      <h2 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-      <p class="intro__lead">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <h2 class="intro-component__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+      <p class="intro-component__lead">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
     <section class="advantages">
-      <h1 class="visually-hidden">Преимущества</h1>
+      <h1 class="sr-only">Преимущества</h1>
       <ul class="advantages__list">
-        <li class="advantages__item">
+        <li class="advantages__item advantages__item--adventagesone">
           <div class="advantages__information">
             <h3 class="advantages__title advantages__title--color">настоящий городок</h3>
             <span class="advantages__number">— №1 —</span>
@@ -91,6 +93,8 @@
         </li>
       </ul>
     </section>
+
+    <!--
     <section class="search-hotel">
       <h2 class="visually-hidden">Поиск отеля</h2>
       <div class="search-hotel__content">
@@ -186,6 +190,11 @@
           </svg>
       </a>
     </p>
-  </footer>
+  </footer>-->
+
+<script src="js/scripts.js"></script>
+<script src="js/picturefill.js"></script>
+<script defer src="js/svgxuse.js"></script>
+<script src="js/svg4everybody.js"></script>
 </body>
 </html>
